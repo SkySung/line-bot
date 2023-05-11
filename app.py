@@ -10,12 +10,19 @@ from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,
 )
 
+<<<<<<< HEAD
 import os
 
 app = Flask(__name__)
 
 line_bot_api = LineBotApi(os.getenv('YOUR_CHANNEL_ACCESS_TOKEN'))
 handler = WebhookHandler(os.getenv('YOUR_CHANNEL_SECRET'))
+=======
+app = Flask(__name__)
+
+line_bot_api = LineBotApi('YOUR_CHANNEL_ACCESS_TOKEN')
+handler = WebhookHandler('YOUR_CHANNEL_SECRET')
+>>>>>>> refs/remotes/origin/main
 
 @app.route("/")
 def home():
@@ -48,4 +55,8 @@ def handle_message(event):
 
     
 if __name__ == "__main__":
+<<<<<<< HEAD
     app.run()
+=======
+    app.run()
+>>>>>>> refs/remotes/origin/main
